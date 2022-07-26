@@ -1,24 +1,24 @@
 /* navigation & logo WebStudio */
 
 .logo {
-    color: var(--main-color);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.20;
+  color: var(--main-color);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
 
-    &:hover,
-    &:focus {
-        color: none;
-    }
+  &:hover,
+  &:focus {
+    color: none;
+  }
 
-    .white {
-        display: inline-block;
-        color: var(--white-color);
-        margin-bottom: 20px;
-    }
+  &.white {
+    display: inline-block;
+    color: var(--white-color);
+    margin-bottom: 20px;
+  }
 
-    .first {
-        color: var(--btn-color);
-    }
+  .first {
+    color: var(--btn-color);
+  }
 }

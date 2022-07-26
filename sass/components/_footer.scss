@@ -5,10 +5,11 @@
 
 .flexbox {
   display: block;
-
+  text-align: center;
   @media screen and (min-width: 768px) {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    text-align: center;
   }
 
   @media screen and (min-width: 1200px) {
@@ -22,10 +23,13 @@
 
   @media screen and (min-width: 768px) {
     margin-right: 165px;
+    margin-left: 76px;
   }
 
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
+    margin-left: 0px;
+    text-align: left;
   }
 }
 
@@ -50,9 +54,12 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
-.footer__list:not(last-child) {
+.footer__list::not(last-child) {
   margin-bottom: 8px;
 
   @media screen and (min-width: 1200px) {
@@ -75,29 +82,38 @@
 }
 
 .footer__second:not(last-child) {
-  // margin-right: 10px;
+  margin-right: 10px;
 }
 
 .footer__ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .footer__icons {
   /* --- Ссылке добавили свойства---- */
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // width: 44px;
-  // height: 44px;
-  // color: var(--white-color);
-  // background: rgba(255, 255, 255, 0.1);
-  // border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--white-color);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+  }
 }
 
 .footer__icons:hover,
 .footer__icons:focus {
-  // background: #2196F3;
-  // transition: color var(--time-animation) var(--cubic-bezier);
+  background: #2196f3;
+  transition: color var(--time-animation) var(--cubic-bezier);
 }
 
 .footer__icons2 {
@@ -109,67 +125,90 @@
 /*==== Footer - Form   =====*/
 
 .container__registration {
-  // margin-left: 94px;
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0px auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+  }
 }
 
 .btn__telegraph {
-  // width: 200px;
-  // height: 50px;
-  // border: none;
+  width: 200px;
+  height: 50px;
+  border: none;
 
-  // background: #2196F3;
-  // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  // border-radius: 4px;
-  // padding-left: 29px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding-left: 29px;
+  margin: 20px auto 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+  }
 }
 
 .connect {
-  // display: flex;
-  // font-family: 'Roboto';
-  // font-weight: 700;
-  // font-size: 16px;
-  // line-height: calc(30/16);
-  // align-items: center;
-  // text-align: center;
-  // letter-spacing: 0.06em;
-  // color: #FFFFFF;
+  display: flex;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
 }
 
 .ico__telegraph {
-  // fill: var(--white-color);
-  // margin-left: 10px;
-  // width: 24px;
-  // height: 24px;
+  fill: var(--white-color);
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
 }
 
 .input__registration {
-  // width: 358px;
-  // height: 50px;
-  // padding-left: 15px;
-  // outline: none;
-  // background: #2F303A;
-  // border: 1px solid rgba(255, 255, 255, 0.3);
-  // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  // border-radius: 4px;
+  width: 450px;
+  height: 50px;
+  padding-left: 15px;
+  outline: none;
+  background: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .input__registration:hover,
 .input__registration:focus {
-  // border-color: var(--btn-color);
-  // color: #fff
+  border-color: var(--btn-color);
+  color: #fff;
 }
 
 .footer__form {
-  // display: flex;
-  // gap: 12px;
+  display: block;
+  gap: 12px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 12px;
+  }
 }
 
 /* ------------Footer - contacts ----------- */
 
 .footer__map {
-  // font-weight: 400;
-  // line-height: 1.71;
-  // color: rgb(255, 255, 255);
+  font-weight: 400;
+  line-height: 1.71;
+  color: rgb(255, 255, 255);
 }
 
 .footer__contact {
