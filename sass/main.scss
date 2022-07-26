@@ -1,5 +1,6 @@
 @import './base/normalize';
 @import './base/basic-value';
+@import './base/container';
 @import './utils/variables';
 @import './utils/logo';
 // !Index page
@@ -16,12 +17,6 @@
 
 // !MODAL
 @import './utils/modal-window';
-
-
-
-
-
-
 
 // @import './utils/placeholders';
 // @import './utils/mixins';

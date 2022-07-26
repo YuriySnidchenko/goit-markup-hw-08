@@ -1,51 +1,75 @@
 /*--------------------- our project ----------------*/
-.advantage {
-    display: flex;
-}
+// .advantage {
+//   display: flex;
+// }
 
 .advantage__main {
+  display: block;
+  padding: 0px;
+  gap: 30px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
     display: flex;
     flex-wrap: nowrap;
-    padding: 0px;
-    gap: 30px;
+  }
 }
 
-.advantage__list:not(:last-child) {
+.advantage__list {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
     width: 270px;
+  }
 }
 
 .advantage__container-svg {
-    /* DIV - icons - container */
-    display: flex;
+  /* DIV - icons - container */
+  display: flex;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 120px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
     width: 270px;
-    height: 120px;
-
-    background: #F5F4FA;
-    border-radius: 4px;
-    margin-bottom: 30px;
+  }
 }
 
 .advantage__icons {
-    /* Li - icons */
-    width: 65px;
-    height: 70px;
-    margin: 25 auto;
+  /* Li - icons */
+  width: 65px;
+  height: 70px;
+  margin: 25 auto;
 }
-
 .advantage__title {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.14;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .advantage__discription {
-    font-weight: 400;
-    line-height: 1.7;
-    text-transform: none;
-    color: var(--secondary-color);
+  font-weight: 400;
+  line-height: 1.7;
+  text-transform: none;
+  color: var(--secondary-color);
 }
