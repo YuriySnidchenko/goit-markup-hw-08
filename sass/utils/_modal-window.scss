@@ -1,0 +1,219 @@
+.backdrop {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 528px;
+    height: 581px;
+
+    background-color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--time-animation) var(--cubic-bezier);
+    border-radius: 4px;
+    padding: 40px;
+    /* outline: 1px solid red; */
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.modal .modal__btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: var(--white-color);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal__btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+
+    &:hover,
+    &:focus {
+        color: #2196F3;
+    }
+}
+
+
+
+.icon-close {
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+}
+
+/* ====  Modal - Forma all =====*/
+.modal__title-form {
+    /* LABEL */
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+
+    color: #212121;
+}
+
+
+
+.form__hidden {
+    color: rgba(117, 117, 117, 1);
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    padding-left: 35px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    outline: none;
+    border-radius: 4px;
+}
+
+.input:focus+.icon__form {
+    fill: var(--btn-color);
+}
+
+.input:focus {
+    border-color: var(--btn-color);
+}
+
+.span {
+    display: block;
+    position: relative;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+
+.icon__form {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+}
+
+.form__textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    outline: none;
+}
+
+.form__textarea:focus {
+    border-color: var(--btn-color);
+    border-radius: 4px;
+}
+
+.chekbox::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    margin-right: 7px;
+}
+
+.chekbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input__checkbox:checked+.chekbox::before {
+    border: none;
+    background-color: #2196F3;
+    background-image: url(../images/checkbox-ok.svg);
+    background-position: center;
+    background-size: 100%;
+}
+
+.license {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+
+    color: #757575;
+}
+
+.color__link {
+    color: #2196F3;
+}
+
+.form__btn {
+    align-content: center;
+    font-family: inherit;
+    font-weight: 700;
+    min-width: 200px;
+    color: var(--white-color);
+    background-color: var(--btn-color);
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    padding: 10px 55px;
+    border-radius: 4px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.chekbox {
+    display: flex;
+}

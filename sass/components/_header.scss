@@ -1,0 +1,98 @@
+.headers {
+    display: flex;
+    padding: 24px 15px;
+}
+
+.headers__nav {
+    display: flex;
+    align-items: center;
+}
+
+.headers__mail {
+    margin-right: 10px;
+    width: 15px;
+    height: 12px;
+    /* outline: 1px solid black; */
+    fill: currentColor;
+}
+
+
+.headers__phone {
+    margin-right: 10px;
+    width: 15px;
+    height: 16px;
+    /* outline: 1px solid black; */
+    fill: currentColor;
+}
+
+.headers__list {
+    display: flex;
+    margin-left: 93px;
+}
+
+.headers__list .list+.list {
+    margin-left: 50px;
+}
+
+.headers__link {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+}
+
+.headers__link:hover,
+.headers__link:focus {
+    color: rgb(33, 150, 243);
+    transition: color var(--time-animation) var(--cubic-bezier);
+}
+
+/* Цвет активной страницы */
+
+.headers__link.link-active {
+    color: var(--btn-color);
+    position: relative;
+}
+
+.headers__link.link-active::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+    bottom: -32px;
+}
+
+/*----------HEADER - контактні данні в Хедер--------*/
+
+.headers__second-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* автоматично відкудує тег в право*/
+}
+
+.headers__second-list .list+.list {
+    margin-left: 50px;
+}
+
+
+.headers__contact-link {
+    display: flex;
+    margin: auto;
+    font-weight: 500;
+    align-items: center;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+    transition: color var(--time-animation) var(--cubic-bezier);
+}
+
+.headers__contact-link:hover,
+.headers__contact-link:focus {
+    color: rgb(33, 150, 243);
+}

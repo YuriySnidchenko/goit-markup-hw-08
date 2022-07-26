@@ -1,0 +1,28 @@
+@import './base/normalize';
+@import './base/basic-value';
+@import './utils/variables';
+@import './utils/logo';
+// !Index page
+@import './components/header';
+@import './components/hero-section';
+@import './components/about-section';
+@import './components/team-section';
+@import './components/advantage-section';
+@import './components/clients-section';
+@import './components/footer';
+
+// !PORTFOLIO page
+@import './components/portfolio';
+
+// !MODAL
+@import './utils/modal-window';
+
+
+
+
+
+
+
+// @import './utils/placeholders';
+// @import './utils/mixins';
+// @import './components/common/logo';

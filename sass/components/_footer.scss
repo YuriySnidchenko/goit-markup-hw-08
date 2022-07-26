@@ -1,0 +1,161 @@
+.footer {
+    padding: 60px 0;
+    background-color: var(--bg-black-color);
+}
+
+.flexbox {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__contacts {
+    margin-right: 70px;
+}
+
+.footer>.logo {
+    margin: 0 0 20px 0;
+}
+
+.footer__second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+}
+
+.footer__title {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer__list:not(last-child) {
+    margin-bottom: 9px;
+}
+
+.contact__second {
+    display: flex;
+}
+
+.footer__second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__second:not(last-child) {
+    margin-right: 10px;
+}
+
+.footer__ul {
+    display: flex;
+}
+
+.footer__icons {
+    /* --- Ссылке добавили свойства---- */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: var(--white-color);
+    /* outline: 1px solid red; */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+
+.footer__icons:hover,
+.footer__icons:focus {
+    background: #2196F3;
+    transition: color var(--time-animation) var(--cubic-bezier);
+}
+
+.footer__icons2 {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/*==== Footer - Form   =====*/
+
+.container__registration {
+    margin-left: 94px;
+}
+
+.btn__telegraph {
+    width: 200px;
+    height: 50px;
+    border: none;
+
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding-left: 29px;
+}
+
+.connect {
+    display: flex;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.ico__telegraph {
+    fill: var(--white-color);
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.input__registration {
+    width: 358px;
+    height: 50px;
+    padding-left: 15px;
+    outline: none;
+    background: #2F303A;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.input__registration:hover,
+.input__registration:focus {
+    border-color: var(--btn-color);
+    color: #fff
+}
+
+.footer__form {
+    display: flex;
+    gap: 12px;
+}
+
+/* ------------Footer - contacts ----------- */
+
+.footer__map {
+    font-weight: 400;
+    line-height: 1.71;
+    color: rgb(255, 255, 255);
+}
+
+.footer__contact {
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__contact:hover,
+.footer__contact:focus {
+    color: rgb(33, 150, 243);
+}
