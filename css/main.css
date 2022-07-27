@@ -1261,10 +1261,29 @@ footer a {
   }
 }
 
+.menu__item {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 35px;
+}
+
 .menu__list {
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+}
+
+.menu__list:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .menu__social {
