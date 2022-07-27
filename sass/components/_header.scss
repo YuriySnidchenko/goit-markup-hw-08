@@ -4,16 +4,23 @@
 }
 
 .headers__nav {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .headers__mail {
   margin-right: 10px;
   width: 15px;
   height: 12px;
-  /* outline: 1px solid black; */
   fill: currentColor;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .headers__phone {
@@ -27,6 +34,10 @@
 .headers__list {
   display: flex;
   margin-left: 93px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .headers__list .list + .list {
@@ -68,9 +79,20 @@
 /*----------HEADER - контактні данні в Хедер--------*/
 
 .headers__second-list {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
   /* автоматично відкудує тег в право*/
 }
 

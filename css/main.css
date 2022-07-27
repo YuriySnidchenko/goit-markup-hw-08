@@ -406,23 +406,23 @@ footer a {
   padding: 24px 15px;
 }
 
-.headers__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 768px) {
+  .headers__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .headers__mail {
   margin-right: 10px;
   width: 15px;
   height: 12px;
-  /* outline: 1px solid black; */
   fill: currentColor;
 }
-
 .headers__phone {
   margin-right: 10px;
   width: 15px;
@@ -436,6 +436,11 @@ footer a {
   display: -ms-flexbox;
   display: flex;
   margin-left: 93px;
+}
+@media screen and (max-width: 767px) {
+  .headers__list {
+    display: none;
+  }
 }
 
 .headers__list .list + .list {
@@ -476,14 +481,30 @@ footer a {
 
 /*----------HEADER - контактні данні в Хедер--------*/
 .headers__second-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
+  display: none;
   /* автоматично відкудує тег в право*/
+}
+@media screen and (min-width: 768px) {
+  .headers__second-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .headers__second-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+  }
 }
 
 .headers__second-list .list + .list {
@@ -516,8 +537,8 @@ footer a {
   text-align: center;
   padding-bottom: 200px;
   padding-top: 200px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/background-img.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background-img.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index/desktop/hero-desktop.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index/desktop/hero-desktop.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1225,27 +1246,105 @@ footer a {
   color: rgb(33, 150, 243);
 }
 
-.portfolio__list {
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 48px 40px;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu__list {
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.menu__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icon-close {
+  fill: currentColor;
+  width: 18px;
+  height: 18px;
+}
+
+.menu__btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Портфолио- portfolio - main */
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolio__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   font-weight: 500;
   line-height: 1.6;
   margin-bottom: 40px;
-  text-align: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 8px;
+  text-align: left;
   list-style-type: none;
 }
 @media screen and (min-width: 768px) {
   .portfolio__list {
     margin-bottom: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
   .portfolio__list {
     margin-bottom: 50px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1266,12 +1365,48 @@ footer a {
 }
 
 .project {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  list-style-type: none;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.project__list {
+  position: relative;
+  width: 100%;
+  background: var(--white-color);
+  border: 2px solid var(--btn-secondary-color);
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .project__list {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project__list {
+    width: 370px;
+    gap: 30px;
+  }
 }
 
 .btn__portfolio:hover,
@@ -1286,25 +1421,10 @@ footer a {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* Портфолио main */
 .test__hover {
   /*=== DIV - контейнер загальний ===*/
   position: relative;
   overflow: hidden;
-}
-
-.pic {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .pic {
-    width: 600px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .pic {
-    width: 100px;
-  }
 }
 
 .portfolio__hover {
